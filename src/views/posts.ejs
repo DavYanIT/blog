@@ -1,0 +1,18 @@
+<%- include('header') %>
+  <div id="form">
+    <div class="container">
+      <h1 class="form-heading">All Posts</h1>
+      <div class="panel"></div>
+      <% if(data) {
+    for(let post of data ) { %>
+        <a href="<%='post/' + post.id %>">
+          <p><%= post.title %></p>
+        </a>
+        <% } 
+  } %>
+      <br>
+      <a href="/post">create post</a>
+      <a href="/logout">logout</a>
+    </div>
+  </div>
+  <%- include('footer') %>

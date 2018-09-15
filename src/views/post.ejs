@@ -1,0 +1,21 @@
+<%- include('header') %>
+<% if(data) { %>
+  <div id="form">
+    <div class="container">
+      <h1 class="form-heading"><%= data.title %>
+      </h1>
+      <div>
+        <div class="main-div">
+          <p class="alert alert-info"><%= data.description %></p>
+          <a href="/posts" class="btn btn-primary">All Posts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+<% if(errors) {
+  for(let error of errors ) { %>
+  <div class="alert alert-danger"><%= error.msg %></div>
+  <% } 
+} %>
+  <%- include('footer') %>
